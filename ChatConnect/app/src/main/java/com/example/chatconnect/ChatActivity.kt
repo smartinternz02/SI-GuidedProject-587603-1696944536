@@ -82,53 +82,5 @@ class ChatActivity : AppCompatActivity() {
                 }
             messageBox.setText("")
         }
-//        val receiverUid = intent.getStringExtra("uid")
-//        val senderUid = FirebaseAuth.getInstance().currentUser?.uid
-//        mDbRef = FirebaseDatabase.getInstance().getReference()
-//
-//        senderRoom = receiverUid + senderUid
-//        receiverRoom = senderUid + receiverUid
-//
-//        supportActionBar?.title = name
-//
-//        chatRecyclerView = findViewById(R.id.chatRecyclerView)
-//        messageBox = findViewById(R.id.messageBox)
-//        sendButton = findViewById(R.id.sendButton)
-//        messageList - ArrayList()
-//        messageAdapter = MessageAdapter(this, messageList)
-//
-//        chatRecyclerView.layoutManager = LinearLayoutManager(this)
-//        chatRecyclerView.adapter = messageAdapter
-//
-//        // Logic for adding data to recyclerView
-//        mDbRef.child("chats").child(senderRoom!!).child("messages")
-//            .addValueEventListener(object: ValueEventListener {
-//                override fun onDataChange(snapshot: DataSnapshot) {
-//                    messageList.clear()
-//                    for (postSnapshot in snapshot.children) {
-//                        val message = postSnapshot.getValue(Message::class.java)
-//                        messageList.add(message!!)
-//                    }
-//                    messageAdapter.notifyDataSetChanged()
-//                }
-//
-//                override fun onCancelled(error: DatabaseError) {
-//
-//                }
-//
-//            })
-//
-//        // Adding message to database
-//        sendButton.setOnClickListener {
-//            val message = messageBox.text.toString()
-//            val messageObject = Message(message, senderUid)
-//
-//            mDbRef.child("chats").child(senderRoom!!).child("messages").push()
-//                .setValue(messageObject).addOnSuccessListener {
-//                    mDbRef.child("chats").child(receiverRoom!!).child("messages").push()
-//                        .setValue(messageObject)
-//                }
-//            messageBox.setText("")
-//        }
     }
 }
